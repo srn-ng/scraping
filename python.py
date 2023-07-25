@@ -20,7 +20,7 @@ with open('GoMyCode.csv', 'w', newline='', encoding='utf-8') as csvfile:
     fieldnames = ['Catégorie','URL', 'Titre', 'Prix', 'Date']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-    writer.writeheader()  # Écrire les en-têtes (noms des colonnes)
+    writer.writeheader() 
 
     for index, url in enumerate(urls, 1):   
         response = requests.get(url)
@@ -38,11 +38,10 @@ with open('GoMyCode.csv', 'w', newline='', encoding='utf-8') as csvfile:
                 ######################################################################################
                 formations_info.append({  'URL':url ,'Titre': title, 'Prix': price, 'Date': today_date})
 
-            # Écrire le grand titre avant d'écrire les informations pour chaque catégorie
+    
             writer.writerow({'Catégorie': f'Catégorie {index}','URL': '', 'Titre': '', 'Prix': '', 'Date': ''})
 
             for formation in formations_info:
-                # Ajouter des espaces avant et après chaque virgule dans les valeurs du fichier CSV
                 formation_with_spaces = {key: f" {value.strip()} " for key, value in formation.items()}
                 writer.writerow(formation_with_spaces)
 
