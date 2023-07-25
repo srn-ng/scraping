@@ -1,8 +1,36 @@
-URL,Titre,Prix,Date
- https://gomycode.com/dz/web-development/ , ISTQB , DZD 39.000 , 2023-07-25 
- https://gomycode.com/dz/web-development/ , The DevOps Bootcamp , DZD 125.000 , 2023-07-25 
- https://gomycode.com/dz/web-development/ , Introduction to Node.js , DZD 39.000 , 2023-07-25 
- https://gomycode.com/dz/web-development/ , The Full-Stack JS Bootcamp , DZD 125.000 , 2023-07-25 
- https://gomycode.com/dz/web-development/ , Introduction to Cybersecurity , DZD 39.000 , 2023-07-25 
- https://gomycode.com/dz/web-development/ , Introduction to React.js , DZD 39.000 , 2023-07-25 
- https://gomycode.com/dz/web-development/ , Introduction to Web Development , DZD 39.000 , 2023-07-25 
+Catégorie,URL,Titre,Prix,Date
+Catégorie 1,,,,
+, https://gomycode.com/dz/web-development/ , ISTQB , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/web-development/ , The DevOps Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/web-development/ , Introduction to Node.js , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/web-development/ , The Full-Stack JS Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/web-development/ , Introduction to Cybersecurity , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/web-development/ , Introduction to React.js , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/web-development/ , Introduction to Web Development , DZD 39.000 , 2023-07-25 
+Catégorie 2,,,,
+, https://gomycode.com/dz/data/ , Introduction to Artificial Intelligence , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/data/ , Introduction to Business Intelligence , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/data/ , The Data Science Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/data/ , Introduction to Power BI , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/data/ , Coding with Python , DZD 39.000 , 2023-07-25 
+Catégorie 3,,,,
+, https://gomycode.com/dz/bootcamps/ , The Ultimate Design Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/bootcamps/ , The DevOps Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/bootcamps/ , The Full-Stack JS Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/bootcamps/ , The Digital Marketing Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/bootcamps/ , The Data Science Bootcamp , DZD 125.000 , 2023-07-25 
+Catégorie 4,,,,
+, https://gomycode.com/dz/design/ , Introduction to User Interface Design , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/design/ , The Ultimate Design Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/design/ , Introduction to UX Design , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/design/ , Graphic design: Adobe Photoshop , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/design/ , Graphic design with Adobe Illustrator , DZD 39.000 , 2023-07-25 
+Catégorie 5,,,,
+, https://gomycode.com/dz/marketing/ , Business Consulting: The Complete Guide , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/marketing/ , Advanced digital marketing: E-commerce & SEO , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/marketing/ , The Digital Marketing Bootcamp , DZD 125.000 , 2023-07-25 
+, https://gomycode.com/dz/marketing/ , Digital Marketing: Social Media Management , DZD 39.000 , 2023-07-25 
+Catégorie 6,,,,
+, https://gomycode.com/dz/game/ , Introduction to 2D Game Development , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/game/ , 2D Game development with Unity , DZD 39.000 , 2023-07-25 
+, https://gomycode.com/dz/game/ , Kids Program: Scratch and App Inventor , DZD 30.000 , 2023-07-25 

@@ -1,44 +1,49 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import json
 from datetime import datetime   
-url = "https://gomycode.com/dz/web-development/"
-response = requests.get(url)
 
-if response.status_code == 200: 
-    soup = BeautifulSoup(response.text, 'html.parser')
-    elements = soup.find_all('div', class_='course-loop-info')
+urls = [
+    "https://gomycode.com/dz/web-development/",
+    "https://gomycode.com/dz/data/",
+    "https://gomycode.com/dz/bootcamps/",
+    "https://gomycode.com/dz/design/",
+    "https://gomycode.com/dz/marketing/",
+    "https://gomycode.com/dz/game/"
+]
 
-    formations_info = []
+formations_info = []
+today_date = datetime.today().strftime('%Y-%m-%d')
 
-    today_date = datetime.today().strftime('%Y-%m-%d')
+# Enregistrer les informations dans un fichier CSV
+with open('GoMyCode.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    fieldnames = ['Catégorie','URL', 'Titre', 'Prix', 'Date']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-    for element in elements:
+    writer.writeheader()  # Écrire les en-têtes (noms des colonnes)
 
-        title_element = element.find('h2', class_='course-loop-title-collapse-2-rows')
-        title = title_element.text.strip()
-        ########################################################################################
-        price_element = element.find('span', class_='woocommerce-Price-amount amount')
-        price = price_element.text.strip()
-        #######################################################################################
+    for index, url in enumerate(urls, 1):   
+        response = requests.get(url)
 
-        formations_info.append({'URL': url, 'Titre': title, 'Prix': price, 'Date': today_date})
+        if response.status_code == 200: 
+            soup = BeautifulSoup(response.text, 'html.parser')
+            elements = soup.find_all('div', class_='course-loop-info')
+            formations_info = []
+            for element in elements:
+                title_element = element.find('h2', class_='course-loop-title-collapse-2-rows')
+                title = title_element.text.strip()
+                ####################################################################################
+                price_element = element.find('span', class_='woocommerce-Price-amount amount')
+                price = price_element.text.strip()
+                ######################################################################################
+                formations_info.append({  'URL':url ,'Titre': title, 'Prix': price, 'Date': today_date})
 
-    # Enregistrer les informations dans un fichier CSV
-    with open('GoMyCode.csv', 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['URL', 'Titre', 'Prix', 'Date']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            # Écrire le grand titre avant d'écrire les informations pour chaque catégorie
+            writer.writerow({'Catégorie': f'Catégorie {index}','URL': '', 'Titre': '', 'Prix': '', 'Date': ''})
 
-        writer.writeheader()  # Écrire les en-têtes (noms des colonnes)
+            for formation in formations_info:
+                # Ajouter des espaces avant et après chaque virgule dans les valeurs du fichier CSV
+                formation_with_spaces = {key: f" {value.strip()} " for key, value in formation.items()}
+                writer.writerow(formation_with_spaces)
 
-        for formation in formations_info:
-            # Ajouter des espaces avant et après chaque virgule dans les valeurs du fichier CSV
-            formation_with_spaces = {key: f" {value.strip()} " for key, value in formation.items()}
-            writer.writerow(formation_with_spaces)
-
-    print("Les informations ont été enregistrées dans formations.csv")
-
-
-
-
+            print(f"Les informations de la catégorie {index} ont été enregistrées dans GoMyCode.csv")
